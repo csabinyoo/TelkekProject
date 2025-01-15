@@ -10,7 +10,7 @@ namespace TelkekProject
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("asdsdsad");
+            Console.WriteLine("teszt");
             Console.ReadLine();
         }
     }
