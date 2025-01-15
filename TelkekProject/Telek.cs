@@ -17,7 +17,6 @@ namespace TelkekProject
             Kozmu = kozmu;
         }
 
-        public abstract double Info();
 
         public abstract double KeruletSzamol();
 
@@ -28,5 +27,7 @@ namespace TelkekProject
             double arPerNm = Kozmu ? 30000 : 10000;
             return TeruletSzamol() * arPerNm;
         }
+
+        public abstract void Info();
     }
 }
