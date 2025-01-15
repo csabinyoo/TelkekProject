@@ -21,6 +21,7 @@ namespace TelkekProject
                 new Háromszög("T7", false, 14.48, 22.84, 22.14),
                 new Négyszög("T8", false, 22.84, 38, 13.95, 19.71, 24.15),
             };
+
             double összesÁr = 0;
             foreach (var telek in telkek)
             {
