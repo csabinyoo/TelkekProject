@@ -26,7 +26,7 @@ namespace TelkekProject
 
         public override double TeruletSzamol()
         {
-            return NégyszögSzámítások.Terület(A, B, C, D, E);
+            return Telek.TerületNégyszög(A, B, C, D, E);
         }
 
         public override double KeruletSzamol()

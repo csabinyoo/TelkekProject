@@ -44,21 +44,25 @@ namespace TelkekProject
             }
         }
 
-        internal static class NégyszögSzámítások
-        {
-            public static double Terület(double a, double b, double c, double d, double e)
+       
+            public static double TerületNégyszög(double a, double b, double c, double d, double e)
             {
-                double s1 = (a + b + e) / 2;
-                double s2 = (c + d + e) / 2;
-                double terulet1 = Math.Sqrt(s1 * (s1 - a) * (s1 - b) * (s1 - e));
-                double terulet2 = Math.Sqrt(s2 * (s2 - c) * (s2 - d) * (s2 - e));
-                return terulet1 + terulet2;
+            
+               return TerületHáromszög (a, b, e) + TerületHáromszög (c, d ,e);
             }
 
-            public static double Kerület(double a, double b, double c, double d)
+            public static double KerületNégyszög(double a, double b, double c, double d)
             {
                 return a + b + c + d;
             }
+
+        public static double TerületHáromszög(double a, double b, double e)
+        {
+            double s = (a + b + e) / 2;
+           
+            double terulet = Math.Sqrt(s * (s - a) * (s - b) * (s - e));
+          
+            return terulet;
         }
 
         public double NégyzetméterÁrSzámol()
