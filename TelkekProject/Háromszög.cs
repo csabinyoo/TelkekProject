@@ -24,18 +24,17 @@ namespace TelkekProject
 
         public override double TeruletSzamol()
         {
-            double s = (A + B + C) / 2;
-            return Math.Sqrt(s * (s - A) * (s - B) * (s - C));
+            return HáromszögSzámítások.Terület(A, B, C);
         }
 
         public override double KeruletSzamol()
         {
-            return A + B + C;
+            return HáromszögSzámítások.Kerület(A, B, C);
         }
 
         public override void Info()
         {
-            Console.WriteLine("{0}, Közmű: {1}, Helyrajzi szám: {2}, A: {3}, B: {4}, C: {5}, K: {6:N2} - T: {7:N2} | {8:N0} Ft", Alak, Kozmu ? "Van" : "Nincs", HelyrajziSzam, A, B, C, KeruletSzamol(), TeruletSzamol(), NégyzetméterÁrSzámol());
+            Console.WriteLine("{0}, Közmű: {1}, Helyrajzi szám: {2}, A: {3}, B: {4}, C: {5}, K: {6:N2} - T: {7} | {8:N0} Ft", Alak, Kozmu ? "Van" : "Nincs", HelyrajziSzam, A, B, C, KeruletSzamol(), TeruletSzamol(), NégyzetméterÁrSzámol());
         }
     }
 }

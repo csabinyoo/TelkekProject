@@ -20,17 +20,17 @@ namespace TelkekProject
 
         public override double TeruletSzamol()
         {
-            return A * B;
+            return TéglalapSzámítások.Terület(A, B);
         }
 
         public override double KeruletSzamol()
         {
-            return 2 * (A + B);
+            return TéglalapSzámítások.Kerület(A, B);
         }
 
         public override void Info()
         {
-            Console.WriteLine("{0} -> Közmű: {1}, Helyrajzi szám: {2}, A: {3}, B: {4}, K: {5:N2} - T: {6:N2} | {7:N0} Ft", Alak, Kozmu ? "Van" : "Nincs", HelyrajziSzam, A, B, KeruletSzamol(), TeruletSzamol(), NégyzetméterÁrSzámol());
+            Console.WriteLine("{0} -> Közmű: {1}, Helyrajzi szám: {2}, A: {3}, B: {4}, K: {5:N2} - T: {6} | {7:N0} Ft", Alak, Kozmu ? "Van" : "Nincs", HelyrajziSzam, A, B, KeruletSzamol(), TeruletSzamol(), NégyzetméterÁrSzámol());
         }
     }
 }
