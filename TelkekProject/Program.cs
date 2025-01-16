@@ -32,8 +32,10 @@ namespace TelkekProject
                 összesKerítés += telek.KeritesSzamol();
             }
             double KerítésÁr = KerítésPMéter * összesKerítés;
-            Console.WriteLine("{0:N0} Ft", összesÁr);
-            Console.WriteLine("{0:N0} m -> {1:N0} Ft", összesKerítés, KerítésÁr);
+            Console.WriteLine("\nEladási ár:");
+            Console.WriteLine("\t{0:N0} Ft", összesÁr);
+            Console.WriteLine("Kerítés ára:");
+            Console.WriteLine("\t{0:N0} m -> {1:N0} Ft", összesKerítés, KerítésÁr);
             Console.ReadLine();
         }
     }
