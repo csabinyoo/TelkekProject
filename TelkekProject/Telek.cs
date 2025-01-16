@@ -8,13 +8,15 @@ namespace TelkekProject
 {
     abstract internal class Telek
     {
-        public string HelyrajziSzam {  get; set; }
-        public bool Kozmu { get; set; }
+        public string helyrajziSzam {  get; set; }
+        public bool kozmu { get; set; }
+        public bool vanSzomszed { get; set; }
 
-        public Telek(string helyrajziSzam, bool kozmu)
+        public Telek(string helyrajziSzam, bool kozmu, bool vanSzomszed)
         {
-            HelyrajziSzam = helyrajziSzam;
-            Kozmu = kozmu;
+            this.helyrajziSzam = helyrajziSzam;
+            this.kozmu = kozmu;
+            this.vanSzomszed = vanSzomszed;
         }
 
 
@@ -55,7 +57,7 @@ namespace TelkekProject
 
         public double NégyzetméterÁrSzámol()
         {
-            double arPerNm = Kozmu ? 30000 : 10000;
+            double arPerNm = kozmu ? 30000 : 10000;
             return TeruletSzamol() * arPerNm;
         }
 
@@ -64,5 +66,7 @@ namespace TelkekProject
         public abstract double TeruletSzamol();
 
         public abstract void Info();
+
+        public abstract double KeritesSzamol();
     }
 }
