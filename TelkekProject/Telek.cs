@@ -17,44 +17,27 @@ namespace TelkekProject
             Kozmu = kozmu;
         }
 
-        internal static class HáromszögSzámítások
-        {
-            public static double Terület(double a, double b, double c)
-            {
-                double s = (a + b + c) / 2;
-                return Math.Sqrt(s * (s - a) * (s - b) * (s - c));
-            }
 
-            public static double Kerület(double a, double b, double c)
-            {
-                return a + b + c;
-            }
+        public static double TerületTéglalap(double a, double b)
+        {
+            return a * b;
         }
 
-        internal static class TéglalapSzámítások
+        public static double KerületTéglalap(double a, double b)
         {
-            public static double Terület(double a, double b)
-            {
-                return a * b;
-            }
-
-            public static double Kerület(double a, double b)
-            {
-                return 2 * (a + b);
-            }
+            return 2 * (a + b);
         }
 
-       
-            public static double TerületNégyszög(double a, double b, double c, double d, double e)
-            {
-            
-               return TerületHáromszög (a, b, e) + TerületHáromszög (c, d ,e);
-            }
 
-            public static double KerületNégyszög(double a, double b, double c, double d)
-            {
-                return a + b + c + d;
-            }
+        public static double TerületNégyszög(double a, double b, double c, double d, double e)
+         {
+            return TerületHáromszög(a, b, e) + TerületHáromszög(c, d ,e);
+         }
+
+         public static double KerületNégyszög(double a, double b, double c, double d)
+         {
+            return KerületHáromszög(a,b,c) + d;
+         }
 
         public static double TerületHáromszög(double a, double b, double e)
         {
@@ -63,6 +46,11 @@ namespace TelkekProject
             double terulet = Math.Sqrt(s * (s - a) * (s - b) * (s - e));
           
             return terulet;
+        }
+
+        public static double KerületHáromszög(double a, double b, double c)
+        {
+            return a + b + c;
         }
 
         public double NégyzetméterÁrSzámol()

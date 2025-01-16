@@ -24,12 +24,12 @@ namespace TelkekProject
 
         public override double TeruletSzamol()
         {
-            return HáromszögSzámítások.Terület(A, B, C);
+            return Telek.TerületHáromszög(A, B, C);
         }
 
         public override double KeruletSzamol()
         {
-            return HáromszögSzámítások.Kerület(A, B, C);
+            return Telek.KerületHáromszög(A, B, C);
         }
 
         public override void Info()

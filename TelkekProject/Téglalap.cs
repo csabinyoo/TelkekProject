@@ -20,12 +20,12 @@ namespace TelkekProject
 
         public override double TeruletSzamol()
         {
-            return TéglalapSzámítások.Terület(A, B);
+            return Telek.TerületTéglalap(A, B);
         }
 
         public override double KeruletSzamol()
         {
-            return TéglalapSzámítások.Kerület(A, B);
+            return Telek.KerületTéglalap(A, B);
         }
 
         public override void Info()
