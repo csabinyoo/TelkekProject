@@ -36,14 +36,7 @@ namespace TelkekProject
 
         public override double KeritesSzamol()
         {
-            if (this.vanSzomszed)
-            {
-                return A + B + D;
-            }
-            else
-            {
-                return A + B + C+ D;
-            }
+            return this.vanSzomszed ? A + B + D : A + B + C + D;
         }
 
         public override void Info()
